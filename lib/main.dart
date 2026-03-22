@@ -13,12 +13,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       /// اسم اول شاشة تظهر
-      initialRoute: AppRoutes.introStoryScreen,
+      initialRoute: AppRoutes.onboardingRouteName,
 
       /// جميع الشاشات التي سنستخدمها
       routes: {
         AppRoutes.homeRouteName : (context) => HomeScreen(),
-        AppRoutes.introStoryScreen: (context) => IntroductionScreen(),
+        AppRoutes.onboardingRouteName: (context) => OnboardingPage(),
       },
     );
   }

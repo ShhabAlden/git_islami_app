@@ -1,4 +1,4 @@
 class AppRoutes {
   static const String homeRouteName ="home_screen";
-  static const String introStoryScreen = "introduction_screen";
+  static const String onboardingRouteName = "onboarding_page";
 }
