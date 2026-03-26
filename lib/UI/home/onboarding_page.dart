@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:islami_app/UI/utils/app_colors.dart';
 
 import '../utils/app_routes.dart';
 
@@ -11,12 +12,13 @@ class OnboardingPage extends StatelessWidget {
       body: IntroductionScreen(globalBackgroundColor: Colors.black,
         //showNextButton: false,
         showBackButton: true,
+        bodyPadding: EdgeInsets.all(50),
         back: Text(
-            "Back", style: TextStyle(color: Color(0xFFE2BE7F), fontSize: 20)),
+            "Back", style: TextStyle(color: AppColors.Golden, fontSize: 20)),
         next: Text(
-            "Next", style: TextStyle(color: Color(0xFFE2BE7F), fontSize: 20)),
+            "Next", style: TextStyle(color: AppColors.Golden, fontSize: 20)),
         done: Text(
-            "Done", style: TextStyle(color: Color(0xFFE2BE7F), fontSize: 20)),
+            "Done", style: TextStyle(color: AppColors.Golden, fontSize: 20)),
         onDone: () {
           Navigator.pushNamed(context, AppRoutes.homeRouteName);
         },
@@ -30,10 +32,10 @@ class OnboardingPage extends StatelessWidget {
             body: "",
             backgroundImage: "assets/images/onboarding_packgraond.png",
               decoration: PageDecoration(titleTextStyle: TextStyle(
-                  color: Color(0xFFE2BE7F), fontSize: 24)
+                  color: AppColors.Golden, fontSize: 24)
                 ,
                 bodyTextStyle: TextStyle(
-                    color: Color(0xFFE2BE7F), fontSize: 20),
+                    color: AppColors.Golden, fontSize: 20),
                 bodyAlignment: Alignment.bottomCenter,
               )
           ),
@@ -47,10 +49,10 @@ class OnboardingPage extends StatelessWidget {
               body: "We Are Very Excited To Have You In Our Community",
               backgroundImage: "assets/images/onboarding_packgraond.png",
               decoration: PageDecoration(titleTextStyle: TextStyle(
-                  color: Color(0xFFE2BE7F), fontSize: 24)
+                  color: AppColors.Golden, fontSize: 24)
                   ,
                   bodyTextStyle: TextStyle(
-                      color: Color(0xFFE2BE7F), fontSize: 20),
+                      color: AppColors.Golden, fontSize: 20),
                   bodyAlignment: Alignment.bottomCenter
               )
           ),
@@ -64,10 +66,10 @@ class OnboardingPage extends StatelessWidget {
               body: "Read, and your Lord is the Most Generous",
               backgroundImage: "assets/images/onboarding_packgraond.png",
               decoration: PageDecoration(titleTextStyle: TextStyle(
-                  color: Color(0xFFE2BE7F), fontSize: 24)
+                  color: AppColors.Golden, fontSize: 24)
                   ,
                   bodyTextStyle: TextStyle(
-                      color: Color(0xFFE2BE7F), fontSize: 20),
+                      color: AppColors.Golden, fontSize: 20),
                   bodyAlignment: Alignment.bottomCenter
               )
           ),
@@ -81,10 +83,10 @@ class OnboardingPage extends StatelessWidget {
               body: "Praise the name of your Lord, the Most High",
               backgroundImage: "assets/images/onboarding_packgraond.png",
               decoration: PageDecoration(titleTextStyle: TextStyle(
-                  color: Color(0xFFE2BE7F), fontSize: 24)
+                  color: AppColors.Golden, fontSize: 24)
                   ,
                   bodyTextStyle: TextStyle(
-                      color: Color(0xFFE2BE7F), fontSize: 20),
+                      color: AppColors.Golden, fontSize: 20),
                   bodyAlignment: Alignment.bottomCenter
               )
           ),
@@ -98,10 +100,10 @@ class OnboardingPage extends StatelessWidget {
               body: "You can listen to the Holy Quran Radio through the application for free and easily",
               backgroundImage: "assets/images/onboarding_packgraond.png",
               decoration: PageDecoration(titleTextStyle: TextStyle(
-                  color: Color(0xFFE2BE7F), fontSize: 24)
+                  color: AppColors.Golden, fontSize: 24)
                   ,
                   bodyTextStyle: TextStyle(
-                      color: Color(0xFFE2BE7F), fontSize: 20),
+                      color: AppColors.Golden, fontSize: 20),
                   bodyAlignment: Alignment.bottomCenter
               )
           ),

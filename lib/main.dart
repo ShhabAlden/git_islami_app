@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/UI/home/home_screen.dart';
 import 'package:islami_app/UI/utils/app_routes.dart';
+import 'package:islami_app/UI/utils/theme.dart';
 import 'UI/home/onboarding_page.dart';
 
 void main(){
@@ -20,6 +21,8 @@ class MyApp extends StatelessWidget {
         AppRoutes.homeRouteName : (context) => HomeScreen(),
         AppRoutes.onboardingRouteName: (context) => OnboardingPage(),
       },
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.dark,
     );
   }
 }
