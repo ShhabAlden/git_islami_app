@@ -3,7 +3,6 @@ import 'package:islami_app/UI/utils/app_colors.dart';
 
 class AppTheme {
   static final ThemeData darkTheme = ThemeData(
-    scaffoldBackgroundColor: AppColors.transparent,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: AppColors.Golden,
       type: BottomNavigationBarType.fixed,
@@ -12,5 +11,9 @@ class AppTheme {
       showSelectedLabels: true,
       showUnselectedLabels: false,
     ),
+      appBarTheme: AppBarThemeData(
+        iconTheme: IconThemeData(color: AppColors.Golden),
+        centerTitle: true,
+        backgroundColor: AppColors.shadows,)
   );
 }

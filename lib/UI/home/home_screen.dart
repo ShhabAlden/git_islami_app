@@ -34,61 +34,75 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery
+        .of(context)
+        .size
+        .width;
+    var height = MediaQuery
+        .of(context)
+        .size
+        .height;
     return Stack(
       children: [
         Image.asset(imageBG[selectedIndex],
           width: double.infinity,
           height: double.infinity,
           fit: BoxFit.fill,),
-        Scaffold(
-          body: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Image.asset(AppAssets.logo,),
-              Expanded(child:
-              tabsList[selectedIndex]
-              )
+        SafeArea(
+          child: Scaffold(
+            backgroundColor: AppColors.transparent,
+            body: Column(
+              // crossAxisAlignment: CrossAxisAlignment.stretch,
+              spacing: height * 0.02,
+              children: [
+                Image.asset(AppAssets.logo,),
+                Expanded(child:
+                tabsList[selectedIndex]
+                )
 
 
-            ],
-          ),
-          bottomNavigationBar: BottomNavigationBar(
-            // backgroundColor: AppColors.Golden,
-            // type: BottomNavigationBarType.fixed,
-            // selectedItemColor: AppColors.white,
-            // unselectedItemColor: AppColors.black,
-            // showSelectedLabels: true,
-            // showUnselectedLabels: false,
+              ],
+            ),
+            bottomNavigationBar: BottomNavigationBar(
+              // backgroundColor: AppColors.Golden,
+              // type: BottomNavigationBarType.fixed,
+              // selectedItemColor: AppColors.white,
+              // unselectedItemColor: AppColors.black,
+              // showSelectedLabels: true,
+              // showUnselectedLabels: false,
 
-            /// تم نقلها الى App theme
+              /// تم نقلها الى App theme
 
-              currentIndex: selectedIndex,
-              onTap: (index) {
-                selectedIndex = index;
-                setState(() {
+                currentIndex: selectedIndex,
+                onTap: (index) {
+                  selectedIndex = index;
+                  setState(() {
 
-                });
-              },
+                  });
+                },
 
-              items:
-              [
-                bulitNavBar(
-                    index: 0, iconName: AppAssets.iconQuran, lable: "Quran"),
-                bulitNavBar(
-                    index: 1, iconName: AppAssets.iconHadeth, lable: "Hadeth"),
-                bulitNavBar(
-                    index: 2, iconName: AppAssets.iconSebha, lable: "Sebha"),
-                bulitNavBar(
-                    index: 3, iconName: AppAssets.iconRadio, lable: "Radio"),
-                bulitNavBar(
-                    index: 4, iconName: AppAssets.iconTime, lable: "Time"),
+                items:
+                [
+                  bulitNavBar(
+                      index: 0, iconName: AppAssets.iconQuran, lable: "Quran"),
+                  bulitNavBar(
+                      index: 1,
+                      iconName: AppAssets.iconHadeth,
+                      lable: "Hadeth"),
+                  bulitNavBar(
+                      index: 2, iconName: AppAssets.iconSebha, lable: "Sebha"),
+                  bulitNavBar(
+                      index: 3, iconName: AppAssets.iconRadio, lable: "Radio"),
+                  bulitNavBar(
+                      index: 4, iconName: AppAssets.iconTime, lable: "Time"),
 
-                // BottomNavigationBarItem(icon: bottomNivBar(index:0,iconName: AppAssets.iconQuran),label: "Quran",),
-                // BottomNavigationBarItem(icon: bottomNivBar(index:1,iconName: AppAssets.iconHadeth),label: "Hadeth",),
-                // BottomNavigationBarItem(icon: bottomNivBar(index:2,iconName: AppAssets.iconSebha),label: "Sebha",),
-                // BottomNavigationBarItem(icon: bottomNivBar(index:3,iconName: AppAssets.iconRadio),label: "Radio",),
-                // BottomNavigationBarItem(icon: bottomNivBar(index:4,iconName: AppAssets.iconTime),label: "Time",)
-              ]
+                  // BottomNavigationBarItem(icon: bottomNivBar(index:0,iconName: AppAssets.iconQuran),label: "Quran",),
+                  // BottomNavigationBarItem(icon: bottomNivBar(index:1,iconName: AppAssets.iconHadeth),label: "Hadeth",),
+                  // BottomNavigationBarItem(icon: bottomNivBar(index:2,iconName: AppAssets.iconSebha),label: "Sebha",),
+                  // BottomNavigationBarItem(icon: bottomNivBar(index:3,iconName: AppAssets.iconRadio),label: "Radio",),
+                  // BottomNavigationBarItem(icon: bottomNivBar(index:4,iconName: AppAssets.iconTime),label: "Time",)
+                ]
+            ),
           ),
         )
       ],

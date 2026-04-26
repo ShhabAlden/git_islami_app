@@ -14,4 +14,16 @@ class AppAssets {
   static String RadioBG = "assets/images/radioBG.png";
 
   static String logo = "assets/images/Logo.png";
+  static String iconSerch = "assets/images/serchIcon.png";
+  static String BGCard = "assets/images/img_most_recent.png";
+  static String iconNumber = "assets/images/img_sur_number_frame.png";
+
+  //sura details
+  static String rightCorner = "assets/images/right_corner.png";
+  static String leftCorner = "assets/images/left_corner.png";
+
+  static String rightCornerBlack = "assets/images/right_corner_black.png";
+  static String leftCornerBlack = "assets/images/left_corner_black.png";
+
+  static String bottomDecoration = "assets/images/bottom_decoration.png";
 }
