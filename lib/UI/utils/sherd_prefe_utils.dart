@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 // todo : Read Data , Get Data => index
 class sherdPrefeKey {
   static const String mostRecentKey = "most_recent";
+  static const String isOnboardingVisited = "is_onboarding_visited";
 }
 
 void saveSuraIndex(int newSuraIndex) async {
@@ -24,4 +25,14 @@ void saveSuraIndex(int newSuraIndex) async {
   }
   // todo : save list in sheared Preferences
   await prefs.setStringList(sherdPrefeKey.mostRecentKey, mostRecentList);
+}
+
+Future<void> setIsOnboardingVisited(bool isVisited) async {
+  final SharedPreferences prefs = await SharedPreferences.getInstance();
+  await prefs.setBool(sherdPrefeKey.isOnboardingVisited, isVisited);
+}
+
+Future<bool> getIsOnboardingVisited() async {
+  final SharedPreferences prefs = await SharedPreferences.getInstance();
+  return prefs.getBool(sherdPrefeKey.isOnboardingVisited) ?? false;
 }

@@ -1,4 +1,10 @@
 class AppAssets {
+  static String on1 = "assets/images/image1.png";
+  static String on2 = "assets/images/image2.png";
+  static String on3 = "assets/images/image3.png";
+  static String on4 = "assets/images/image4.png";
+  static String on5 = "assets/images/image5.png";
+
   static String background = "assets/images/Background.png";
   static String iconQuran = "assets/images/Quran.png";
   static String iconHadeth = "assets/images/ic_hadeth.png";
@@ -12,6 +18,9 @@ class AppAssets {
   static String SebhaBG = "assets/images/sebhaBG.png";
   static String TimeBG = "assets/images/timeBG.png";
   static String RadioBG = "assets/images/radioBG.png";
+
+  static String headOfSeb7a = "assets/images/headOfSeb7a.png";
+  static String SebhaBody = "assets/images/SebhaBody.png";
 
   static String logo = "assets/images/Logo.png";
   static String iconSerch = "assets/images/serchIcon.png";
