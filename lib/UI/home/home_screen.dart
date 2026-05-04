@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:islami_app/UI/home/tabs/hadeth/hadeth_tab.dart';
 import 'package:islami_app/UI/home/tabs/quran/quran_tab.dart';
 import 'package:islami_app/UI/home/tabs/radio/radio_tab.dart';
+import 'package:islami_app/UI/home/tabs/sebha/sebha_provider.dart';
 import 'package:islami_app/UI/home/tabs/sebha/sebha_tab.dart';
 import 'package:islami_app/UI/home/tabs/time/time_tab.dart';
 import 'package:islami_app/UI/utils/app_assets.dart';
+import 'package:provider/provider.dart';
 
 import '../utils/app_colors.dart';
 
@@ -27,7 +29,8 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Widget> tabsList = [
     QuranTab(),
     HadethTab(),
-    SebhaTab(),
+    ChangeNotifierProvider(create: (context) => SebhaProvider(),
+      child: SebhaTab(),),
     RadioTab(),
     TimeTab(),
   ];
@@ -53,14 +56,12 @@ class _HomeScreenState extends State<HomeScreen> {
             backgroundColor: AppColors.transparent,
             body: Column(
               // crossAxisAlignment: CrossAxisAlignment.stretch,
-              spacing: height * 0.02,
+              //spacing: height * 0.02,
               children: [
                 Image.asset(AppAssets.logo,),
                 Expanded(child:
                 tabsList[selectedIndex]
                 )
-
-
               ],
             ),
             bottomNavigationBar: BottomNavigationBar(
@@ -76,9 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 currentIndex: selectedIndex,
                 onTap: (index) {
                   selectedIndex = index;
-                  setState(() {
-
-                  });
+                  setState(() {});
                 },
 
                 items:

@@ -9,14 +9,14 @@ class SuraContant1 extends StatelessWidget {
     required this.verses,
     required this.index,
     super.key,
-    required this.isSelected, // 👈 أضفناها
+    required this.isSelected,
     required this.onTap,
   });
 
   int index;
   String verses;
-  bool isSelected; // 👈 جديد
-  VoidCallback onTap; // 👈 جديد
+  bool isSelected;
+  VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
